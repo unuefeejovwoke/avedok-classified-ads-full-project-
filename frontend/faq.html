@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Avedok || Classified Ads Website</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-select.css">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!--//fonts-->	
+<!-- js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- js -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+</script>
+<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+<link href="css/jquery.uls.css" rel="stylesheet"/>
+<link href="css/jquery.uls.grid.css" rel="stylesheet"/>
+<link href="css/jquery.uls.lcd.css" rel="stylesheet"/>
+<!-- Source -->
+<script src="js/jquery.uls.data.js"></script>
+<script src="js/jquery.uls.data.utils.js"></script>
+<script src="js/jquery.uls.lcd.js"></script>
+<script src="js/jquery.uls.languagefilter.js"></script>
+<script src="js/jquery.uls.regionfilter.js"></script>
+<script src="js/jquery.uls.core.js"></script>
+<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+<script src="js/easyResponsiveTabs.js"></script>
+
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/Avedok Logotype - Grey + Gradient - Transparent Bg.png" alt=""></a>
+			</div>
+			<div class="header-right">
+			<a class="account" href="login.html">My Account</a>
+
+	<!-- Large modal -->
+			<div class="selectregion">
+				<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+				Select Location</button>
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+					aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+										&times;</button>
+									<h4 class="modal-title" id="myModalLabel">
+										Please Choose Your Location</h4>
+								</div>
+								<div class="modal-body">
+									 <form class="form-horizontal" role="form">
+										<div class="form-group">
+											<select id="basic2" class="show-tick form-control" multiple>
+												<optgroup label="Popular Cities">
+													<option selected style="display:none;color:#eee;">Select State</option>
+													<option>Abuja</option>
+													<option>Lagos</option>
+													<option>Delta</option>
+													
+													
+												</optgroup>
+						
+											</select>
+										</div>
+									  </form>    
+								</div>
+							</div>
+						</div>
+					</div>
+				<script>
+				$('#myModal').modal('');
+				</script>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="main-banner banner text-center">
+	  <div class="container">    
+			<h1>Sell or Advertise   anything online  with Ave<span>dok</span></h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+			<a href="post-ad.html">Post Free Ad</a>
+	  </div>
+	</div>
+	<!-- Faq -->
+	<div class="faq main-grid-border">
+		<div class="container">
+			<h2 class="head">Faqs</h2>
+			<dl class="faq-list">
+				<dt class="faq-list_h">
+				<h4 class="marker">Q1</h4>
+				<h5 class="marker_head">What is Avedok.com?</h5>
+				</dt>
+				<dd>
+				<h4 class="marker1">A.</h4>
+				<p class="m_13">Avedok.com is one of the leading indigenous platforms in Nigeria to buy and sell new and fairly used items, offer your services or promote your digital products.
+
+
+					Avedok.com connects product sellers and service providers with end users. We have a very high scrutiny process that ensures that only legitimate products and services are offered on our platform.</p>
+				</dd>
+				<dt class="faq-list_h">
+				<h4 class="marker">Q2</h4>
+				<h5 class="marker_head">Do you offer promotional or affiliate opportunities?</h5>
+				</dt>
+				<dd>
+				<h4 class="marker">A.</h4>
+				<p class="m_13">We reward loyal customers from time to time and offer incentives for referrals. Do check your mail box for our goodies and love letters. </p>
+				</dd>
+				<dt class="faq-list_h">
+				<h4 class="marker">Q3</h4>
+				<h5 class="marker_head"> How can I secure my account?</h5>
+				</dt>
+				<dd>
+				<h4 class="marker">A.</h4>
+				<p class="m_13">Please do not disclose your login details to anyone, even if such a person claims to be calling from Avedok.
+
+
+					It is usually advised that your cell phone has a security lock to avoid access by indiscriminate users. However, you can also set up two factor authentication (2FA) on your account to improve security. </p>
+				</dd>
+				<dt class="faq-list_h">
+				<h4 class="marker">Q4</h4>
+				<h5 class="marker_head">How often do I get charged?
+
+				</h5>
+				</dt>
+				<dd>
+				<h4 class="marker">A.</h4>
+				<p class="m_13">Everyone can enjoy the platform for free. Those interested in running promotions to be ahead of everyone else and close sales faster can sign up for our Enterprise or Premium plans. This gives you more visibility on our platform, along with other perks that come with it. You get charged for your subscription monthly. 30 days from the day of your payment. </p>
+				</dd>
+				<dt class="faq-list_h">
+				<h4 class="marker">Q5</h4>
+				<h5 class="marker_head"> How do I renew my subscription?
+
+				</h5>
+				</dt>
+				<dd>
+				<h4 class="marker">A.</h4>
+				<p class="m_13">Under your profile, navigate to billing and choose 'renew subscription' before the expiration date. 
+
+				</p>
+				</dd>
+				<dt class="faq-list_h">
+				<h4 class="marker">Q6</h4>
+				<h5 class="marker_head">I want to delete my account. 
+
+				</h5>
+				</dt>
+				<dd>
+				<h4 class="marker">A.</h4>
+				<p class="m_13">Please send a mail to avedok.info@gmail.com
+
+				</p>
+				</dd>
+				<dt class="faq-list_h">
+				<h4 class="marker">Q7</h4>
+				<h5 class="marker_head">What method of payment is acceptable?</h5>
+				</dt>
+				<dd>
+				<h4 class="marker">A.</h4>
+				<p class="m_13">Visa card, Mastercard, and direct Bank Transfer.</p>
+				</dd>
+				<dt class="faq-list_h">
+				<h4 class="marker">Q8</h4>
+				<h5 class="marker_head">I've received a wrong/faulty order, what should I do? </h5>
+				</dt>
+				<dd>
+				<h4 class="marker">A.</h4>
+				<p class="m_13 last_2">Please contact the vendor directly. If nothing is done to correct the discrepancy, leave a review on their profile or contact avedok.info@gmail.com for help.  
+
+
+				With Avedok, You're in good hands!</p>
+          </dl>
+
+		</div>	
+	</div>
+	<!-- // Faq -->
+	<footer>
+		<div class="footer-top">
+			<div class="container">
+				<div class="foo-grids">
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Who We Are</h4>
+						<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+						<p>The point of using Lorem Ipsum is that it has a more-or-less normal letters, as opposed to using 'Content here.</p>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Help</h4>
+						<ul>
+							<li><a href="howitworks.html">How it Works</a></li>						
+							
+							<li><a href="faq.html">Faq</a></li>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							
+						</ul>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Information</h4>
+						<ul>
+							<li><a href="regions.html">Locations Map</a></li>	
+							<li><a href="terms.html">Terms of Use</a></li>
+						
+							<li><a href="privacy.html">Privacy Policy</a></li>	
+						</ul>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Contact Us</h4>
+						<span class="hq">Our headquarters</span>
+						<address>
+							<ul class="location">
+								<li><span class="glyphicon glyphicon-map-marker"></span></li>
+								<li>CENTER FOR FINANCIAL ASSISTANCE TO DEPOSED NIGERIAN ROYALTY</li>
+								<div class="clearfix"></div>
+							</ul>	
+							<ul class="location">
+								<li><span class="glyphicon glyphicon-earphone"></span></li>
+								<li>+0 561 111 235</li>
+								<div class="clearfix"></div>
+							</ul>	
+							<ul class="location">
+								<li><span class="glyphicon glyphicon-envelope"></span></li>
+								<li><a href="mailto:info@example.com">mail@example.com</a></li>
+								<div class="clearfix"></div>
+							</ul>						
+						</address>
+					</div>
+					<div class="clearfix"></div>
+				</div>						
+			</div>	
+		</div>	
+		<div class="footer-bottom text-center">
+		<div class="container">
+			<div class="footer-logo">
+				<a href="index.html"><img src="images/avedok.png" alt=""></a>
+			</div>
+			<div class="footer-social-icons">
+				<ul>
+					<li><a class="facebook" href="#"><span>Facebook</span></a></li>
+					<li><a class="twitter" href="#"><span>Twitter</span></a></li>
+					<li><a class="googleplus" href="#"><span>Google+</span></a></li>
+					<li><a class="dribbble" href="#"><span>Dribbble</span></a></li>
+				</ul>
+			</div>
+			<div class="copyrights">
+				<p> © Avedok Classified Ads Website</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	</footer>
+        <!--footer section end-->
+</body>
+</html>

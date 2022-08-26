@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Avedok || Classified Ads Website</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-select.css">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="uikit/styles/uikit.css" />
+<!-- Dev Search UI -->
+<link rel="stylesheet" href="css/app.css" />
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!--//fonts-->	
+<!-- js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- js -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+</script>
+<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+<link href="css/jquery.uls.css" rel="stylesheet"/>
+<link href="css/jquery.uls.grid.css" rel="stylesheet"/>
+<link href="css/jquery.uls.lcd.css" rel="stylesheet"/>
+<!-- Source -->
+<script src="js/jquery.uls.data.js"></script>
+<script src="js/jquery.uls.data.utils.js"></script>
+<script src="js/jquery.uls.lcd.js"></script>
+<script src="js/jquery.uls.languagefilter.js"></script>
+<script src="js/jquery.uls.regionfilter.js"></script>
+<script src="js/jquery.uls.core.js"></script>
+
+</head>
+<body>
+	<header class="header">
+        <div class="container container--narrow">
+          <a href="/" class="header__logo">
+            <img src="images/Avedok Logo-for dark bg.svg " alt=""/>
+          </a>
+          <nav class="header__nav">
+            <input type="checkbox" id="responsive-menu" />
+            <label for="responsive-menu" class="toggle-menu">
+              <span>Menu</span>
+              <div class="toggle-menu__lines"></div>
+            </label>
+            <ul class="header__menu">
+              
+              <li class="header__menuItem"><a href="projects.html">Projects</a></li>
+              <li class="header__menuItem"><a href="inbox.html">Inbox</a></li>
+              <li class="header__menuItem"><a href="account.html">My Account</a></li>
+              <li class="header__menuItem"><a href="login.html" class="btn btn--sub">Login/Sign Up</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+	 <section>
+			<div id="page-wrapper" class="sign-in-wrapper">
+				<div class="graphs">
+					<div class="sign-in-form">
+						<div class="sign-in-form-top">
+							<h1>Log in</h1>
+						</div>
+						<div class="signin">
+							<div class="signin-rit">
+								<span class="checkbox1">
+									 <label class="checkbox"><input type="checkbox" name="checkbox" checked="">Forgot Password ?</label>
+								</span>
+								<p><a href="#">Click Here</a> </p>
+								<div class="clearfix"> </div>
+							</div>
+							<form>
+							<div class="log-input">
+								<div class="log-input-left">
+								   <input type="text" class="user" value="Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Email';}"/>
+								</div>
+								<span class="checkbox2">
+									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
+								</span>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="log-input">
+								<div class="log-input-left">
+								   <input type="password" class="lock" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
+								</div>
+								<span class="checkbox2">
+									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
+								</span>
+								<div class="clearfix"> </div>
+							</div>
+							<input type="submit" value="Log in">
+						</form>	 
+						</div>
+						<div class="new_people">
+							<h2>For New People</h2>
+							<p>If You don't have an account please sign up</p>
+							<a href="register.html">Register Now!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	</section>
+	<footer>
+		<div class="footer-top">
+			<div class="container">
+				<div class="foo-grids">
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Who We Are</h4>
+						<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+						<p>The point of using Lorem Ipsum is that it has a more-or-less normal letters, as opposed to using 'Content here.</p>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Help</h4>
+						<ul>
+							<li><a href="howitworks.html">How it Works</a></li>						
+							
+							<li><a href="faq.html">Faq</a></li>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							
+						</ul>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Information</h4>
+						<ul>
+							<li><a href="regions.html">Locations Map</a></li>	
+							<li><a href="terms.html">Terms of Use</a></li>
+						
+							<li><a href="privacy.html">Privacy Policy</a></li>	
+						</ul>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Contact Us</h4>
+						<span class="hq">Our headquarters</span>
+						<address>
+							<ul class="location">
+								<li><span class="glyphicon glyphicon-map-marker"></span></li>
+								<li>CENTER FOR FINANCIAL ASSISTANCE TO DEPOSED NIGERIAN ROYALTY</li>
+								<div class="clearfix"></div>
+							</ul>	
+							<ul class="location">
+								<li><span class="glyphicon glyphicon-earphone"></span></li>
+								<li>+0 561 111 235</li>
+								<div class="clearfix"></div>
+							</ul>	
+							<ul class="location">
+								<li><span class="glyphicon glyphicon-envelope"></span></li>
+								<li><a href="mailto:info@example.com">mail@example.com</a></li>
+								<div class="clearfix"></div>
+							</ul>						
+						</address>
+					</div>
+					<div class="clearfix"></div>
+				</div>						
+			</div>	
+		</div>	
+		<div class="footer-bottom text-center">
+		<div class="container">
+			<div class="footer-logo">
+				<a href="index.html"><img src="images/avedok.png" alt=""></a>
+			</div>
+			<div class="footer-social-icons">
+				<ul>
+					<li><a class="facebook" href="#"><span>Facebook</span></a></li>
+					<li><a class="twitter" href="#"><span>Twitter</span></a></li>
+					<li><a class="googleplus" href="#"><span>Google+</span></a></li>
+					<li><a class="dribbble" href="#"><span>Dribbble</span></a></li>
+				</ul>
+			</div>
+			<div class="copyrights">
+				<p> © Avedok Classified Ads Website</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	</footer>
+	<!--footer section end-->
+</body>
+</html>

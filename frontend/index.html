@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Avedok || Classified Ads Website</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-select.css">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="uikit/styles/uikit.css" />
+<!-- Dev Search UI -->
+<link rel="stylesheet" href="css/app.css" />
+
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!--//fonts-->	
+<!-- js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- js -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+</script>
+
+<!-- ad script -->
+
+<script>
+	$(document).ready(function() {
+		var ad = $('#popup')
+		var ovrly = $('#ad-overlay')
+		var adclsbtn = $('.popclose')
+
+		function showAd() {
+			ad.addClass('active')
+			ovrly.addClass('active')
+		}
+		setTimeout(showAd, 5000)
+
+		function closeAd() {
+			ad.removeClass('active')
+			ovrly.removeClass('active')
+
+		}
+		$('.popclose').click(closeAd)
+
+
+	});
+</script>
+<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+<link href="css/jquery.uls.css" rel="stylesheet"/>
+<link href="css/jquery.uls.grid.css" rel="stylesheet"/>
+<link href="css/jquery.uls.lcd.css" rel="stylesheet"/>
+<!-- Source -->
+<script src="js/jquery.uls.data.js"></script>
+<script src="js/jquery.uls.data.utils.js"></script>
+<script src="js/jquery.uls.lcd.js"></script>
+<script src="js/jquery.uls.languagefilter.js"></script>
+<script src="js/jquery.uls.regionfilter.js"></script>
+<script src="js/jquery.uls.core.js"></script>
+<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+<script src="js/easyResponsiveTabs.js"></script>
+
+</head>
+<body>
+
+	<!-- popup-ad-starts-here -->
+
+    <div class="popup" id="popup">
+        <div class="close"> <button class="close-button popclose">&times;</button></div>
+        <div class="ad-content">
+            <div class="ad-hero"><img src="images/eba-ad.png" alt="pop up ad"></div>
+            <div class="ad-text">
+                <h2>Get <br> Empowered <br> with</h2>
+                <span class="red-bold">100k</span> <span class="black-bold">CASH</span>
+                <P>
+                    To Grow Your Business </P>
+                <div class="ad-button">
+                    <button class="red-ad-button btn">Register Today</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="ad-overlay"></div>
+    <!-- popup-ad-ends-here -->
+	<nav>
+		<div class="logo">
+		   Brand
+		</div>
+		<input type="checkbox" id="click">
+		<label for="click" class="menu-btn">
+		<i class="fas fa-bars"></i>
+		</label>
+		<ul>
+		   <li><a class="active" href="#">Home</a></li>
+		   <li><a href="#">About</a></li>
+		   <li><a href="#">Services</a></li>
+		   <li><a href="#">Gallery</a></li>
+		   <li><a href="#">Feedback</a></li>
+		</ul>
+	 </nav>
+
+	<!-- <header class="header">
+        <div class="container container--narrow">
+          <a href="/" class="header__logo">
+            <img src="images/Avedok Logo-for dark bg.svg " alt=""/>
+          </a>
+          <nav class="header__nav">
+            <input type="checkbox" id="responsive-menu" />
+            <label for="responsive-menu" class="toggle-menu">
+              <span>Menu</span>
+              <div class="toggle-menu__lines"></div>
+            </label>
+            <ul class="header__menu">
+              
+              <li class="header__menuItem"><a href="projects.html">Projects</a></li>
+              <li class="header__menuItem"><a href="inbox.html">Inbox</a></li>
+              <li class="header__menuItem"><a href="account.html">My Account</a></li>
+              <li class="header__menuItem"><a href="login.html" class="btn btn--sub">Login/Sign Up</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header> -->
+	<div class="main-banner banner">
+	  
+	</div>
+		<!-- content-starts-here -->
+		<div class="content">
+			<div class="categories">
+				<div class="container">
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-mobile"></i></div>
+									<h4 class="clrchg">Mobiles</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab2">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-laptop"></i></div>
+									<h4 class="clrchg"> Electronics & Appliances</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab3">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-car"></i></div>
+									<h4 class="clrchg">Cars</h4>
+								</div>
+							</div>
+						</a>
+					</div>	
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab4">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-motorcycle"></i></div>
+									<h4 class="clrchg">Bikes</h4>
+								</div>
+							</div>
+						</a>
+					</div>	
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab5">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-wheelchair"></i></div>
+									<h4 class="clrchg">Furnitures</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab6">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-paw"></i></div>
+									<h4 class="clrchg">Pets</h4>
+								</div>
+							</div>
+						</a>
+					</div>	
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab7">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-book"></i></div>
+									<h4 class="clrchg">Books, Sports & Hobbies</h4>
+								</div>
+							</div>
+						</a>
+					</div>	
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab8">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-asterisk"></i></div>
+									<h4 class="clrchg">Fashion</h4>
+								</div>
+							</div>
+						</a>
+					</div>	
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab9">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-gamepad"></i></div>
+									<h4 class="clrchg">Games</h4>
+								</div>
+							</div>
+						</a>
+					</div>	
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab10">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-shield"></i></div>
+									<h4 class="clrchg">Services</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab11">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-at"></i></div>
+									<h4 class="clrchg">Jobs</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-2 focus-grid">
+						<a href="categories.html#parentVerticalTab12">
+							<div class="focus-border">
+								<div class="focus-layout">
+									<div class="focus-image"><i class="fa fa-home"></i></div>
+									<h4 class="clrchg">Real Estate</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="trending-ads">
+				<div class="container">
+				<!-- slider -->
+				<div class="trend-ads">
+					<h2>Trending Ads</h2>
+							<ul id="flexiselDemo3">
+								<li>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p1.jpg"/>
+											<span class="price">NGN 450</span>
+										</a> 
+										<div class="ad-info">
+											<h5>There are many variations of passages</h5>
+											<span>1 hour ago</span>
+										</div>
+									</div>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p2.jpg"/>
+											<span class="price">NGN 399</span>
+										</a> 
+										<div class="ad-info">
+											<h5>Lorem Ipsum is simply dummy</h5>
+											<span>3 hour ago</span>
+										</div>
+									</div>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p3.jpg"/>
+											<span class="price">NGN 199</span>
+										</a> 
+										<div class="ad-info">
+											<h5>It is a long established fact that a reader</h5>
+											<span>8 hour ago</span>
+										</div>
+									</div>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p4.jpg"/>
+											<span class="price">NGN 159</span>
+										</a> 
+										<div class="ad-info">
+											<h5>passage of Lorem Ipsum you need to be</h5>
+											<span>19 hour ago</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p5.jpg"/>
+											<span class="price">NGN 1599</span>
+										</a> 
+										<div class="ad-info">
+											<h5>There are many variations of passages</h5>
+											<span>1 hour ago</span>
+										</div>
+									</div>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p6.jpg"/>
+											<span class="price">NGN 1099</span>
+										</a> 
+										<div class="ad-info">
+											<h5>passage of Lorem Ipsum you need to be</h5>
+											<span>1 day ago</span>
+										</div>
+									</div>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p7.jpg"/>
+											<span class="price">NGN 109</span>
+										</a> 
+										<div class="ad-info">
+											<h5>It is a long established fact that a reader</h5>
+											<span>9 hour ago</span>
+										</div>
+									</div>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p8.jpg"/>
+											<span class="price">NGN 189</span>
+										</a> 
+										<div class="ad-info">
+											<h5>Lorem Ipsum is simply dummy</h5>
+											<span>3 hour ago</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p9.jpg"/>
+											<span class="price">NGN 2599</span>
+										</a> 
+										<div class="ad-info">
+											<h5>Lorem Ipsum is simply dummy</h5>
+											<span>3 hour ago</span>
+										</div>
+									</div>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p10.jpg"/>
+											<span class="price">NGN 3999</span>
+										</a> 
+										<div class="ad-info">
+											<h5>It is a long established fact that a reader</h5>
+											<span>9 hour ago</span>
+										</div>
+									</div>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p11.jpg"/>
+											<span class="price">NGN 2699</span>
+										</a> 
+										<div class="ad-info">
+											<h5>passage of Lorem Ipsum you need to be</h5>
+											<span>1 day ago</span>
+										</div>
+									</div>
+									<div class="col-md-3 biseller-column">
+										<a href="single.html">
+											<img src="images/p12.jpg"/>
+											<span class="price">NGN 899</span>
+										</a> 
+										<div class="ad-info">
+											<h5>There are many variations of passages</h5>
+											<span>1 hour ago</span>
+										</div>
+									</div>
+								</li>
+						</ul>
+					<script type="text/javascript">
+						 $(window).load(function() {
+							$("#flexiselDemo3").flexisel({
+								visibleItems:1,
+								animationSpeed: 1000,
+								autoPlay: true,
+								autoPlaySpeed: 5000,    		
+								pauseOnHover: true,
+								enableResponsiveBreakpoints: true,
+								responsiveBreakpoints: { 
+									portrait: { 
+										changePoint:480,
+										visibleItems:1
+									}, 
+									landscape: { 
+										changePoint:640,
+										visibleItems:1
+									},
+									tablet: { 
+										changePoint:768,
+										visibleItems:1
+									}
+								}
+							});
+							
+						});
+					   </script>
+					   <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+					</div>   
+			</div>
+			<!-- //slider -->				
+			</div>
+			<!--featured ads-->
+			
+			
+			
+		</div>
+		<section id="about-app" class="section-p1">
+			<h1>How Avedok <a href="#">Works</a></h1> 
+			<div class="video">
+				<video autoplay muted loop src="images/1.mp4"></video>
+			</div>
+		</section>
+		<!--footer section start-->	
+		<section class="card1 container1 grid1">
+            <div class="card__container grid1">
+                <!--==================== CARD 1 ====================-->
+                <article class="card__content grid1">
+                    <div class="card__pricing">
+                        <div class="card__pricing-number">
+                            <span class="card__pricing-symbol">NGN</span>0
+                        </div>
+                        <span class="card__pricing-month">/month</span>
+                    </div>
+    
+                    <header class="card__header">
+                        <div class="card__header-circle grid1">
+                            <img src="images/free-coin.png" alt="" class="card__header-img">
+                        </div>
+                        
+                        <span class="card__header-subtitle">Free plan</span>
+                        <h1 class="card__header-title">Basic</h1>
+                    </header>
+                    
+                    <ul class="card__list grid1">
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">1 Ad per Category</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">No Ad Boost</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">No Catalog Page</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Links To Whatsapp Only</p>
+                        </li>
+                    </ul>
+    
+                    <button class="card__button">Choose this plan</button>
+                </article>
+    
+                <!--==================== CARD 2 ====================-->
+                <article class="card__content grid1">
+                    <div class="card__pricing">
+                        <div class="card__pricing-number">
+                            <span class="card__pricing-symbol">NGN</span>0
+                        </div>
+                        <span class="card__pricing-month">30,000/month</span>
+                    </div>
+    
+                    <header class="card__header">
+                        <div class="card__header-circle grid1">
+                            <img src="images/pro-coin.png" alt="" class="card__header-img">
+                        </div>
+    
+                        <span class="card__header-subtitle">Most popular</span>
+                        <h1 class="card__header-title">Premium</h1>
+                    </header>
+                    
+                    <ul class="card__list grid1">
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited Ads Post</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited Ads Per Category</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">5 Ad Boost per week for 7 days each</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">2 Featured Ads</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Links to all Socials</p>
+                        </li>
+                    </ul>
+    
+                    <button class="card__button">Choose this plan</button>
+                </article>
+    
+                <!--==================== CARD 3 ====================-->
+                <article class="card__content grid1">
+                    <div class="card__pricing">
+                        <div class="card__pricing-number">
+                            <span class="card__pricing-symbol">NGN</span>
+                        </div>
+                        <span class="card__pricing-month">50,000/month</span>
+                    </div>
+    
+                    <header class="card__header">
+                        <div class="card__header-circle grid1">
+                            <img src="images/enterprise-coin.png" alt="" class="card__header-img">
+                        </div>
+    
+                        <span class="card__header-subtitle">For agencies</span>
+                        <h1 class="card__header-title">Enterprise</h1>
+                    </header>
+                    
+					<ul class="card__list grid1">
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited Ads Post</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited Ads Per Category</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">8 Ad Boost per week for 7 days each</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">3 Featured Ads</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Direct link to your website all Socials</p>
+                        </li>
+                    </ul>
+    
+                    <button class="card__button">Choose this plan</button>
+                </article>
+            </div>
+        </section>	
+		<footer>
+			<div class="footer-top">
+				<div class="container">
+					<div class="foo-grids">
+						<div class="col-md-3 footer-grid">
+							<h4 class="footer-head">Who We Are</h4>
+							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+							<p>The point of using Lorem Ipsum is that it has a more-or-less normal letters, as opposed to using 'Content here.</p>
+						</div>
+						<div class="col-md-3 footer-grid">
+							<h4 class="footer-head">Help</h4>
+							<ul>
+								<li><a href="howitworks.html">How it Works</a></li>						
+								
+								<li><a href="faq.html">Faq</a></li>
+								<li><a href="feedback.html">Feedback</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								
+							</ul>
+						</div>
+						<div class="col-md-3 footer-grid">
+							<h4 class="footer-head">Information</h4>
+							<ul>
+								<li><a href="regions.html">Locations Map</a></li>	
+								<li><a href="terms.html">Terms of Use</a></li>
+							
+								<li><a href="privacy.html">Privacy Policy</a></li>	
+							</ul>
+						</div>
+						<div class="col-md-3 footer-grid">
+							<h4 class="footer-head">Contact Us</h4>
+							<span class="hq">Our headquarters</span>
+							<address>
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-map-marker"></span></li>
+									<li>CENTER FOR FINANCIAL ASSISTANCE TO DEPOSED NIGERIAN ROYALTY</li>
+									<div class="clearfix"></div>
+								</ul>	
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-earphone"></span></li>
+									<li>+0 561 111 235</li>
+									<div class="clearfix"></div>
+								</ul>	
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-envelope"></span></li>
+									<li><a href="mailto:info@example.com">mail@example.com</a></li>
+									<div class="clearfix"></div>
+								</ul>						
+							</address>
+						</div>
+						<div class="clearfix"></div>
+					</div>						
+				</div>	
+			</div>	
+			<div class="footer-bottom text-center">
+			<div class="container">
+				<div class="footer-logo">
+					<a href="index.html"><img src="images/avedok.png" alt=""></a>
+				</div>
+				<div class="footer-social-icons">
+					<ul>
+						<li><a class="facebook" href="#"><span>Facebook</span></a></li>
+						<li><a class="twitter" href="#"><span>Twitter</span></a></li>
+						<li><a class="googleplus" href="#"><span>Google+</span></a></li>
+						<li><a class="dribbble" href="#"><span>Dribbble</span></a></li>
+					</ul>
+				</div>
+				<div class="copyrights">
+					<p> © Avedok Classified Ads Website</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		</footer>
+		<!--footer section end-->
+        <!--footer section end-->
+</body>
+</html>

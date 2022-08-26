@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Avedok || Classified Ads Website</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-select.css">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!--//fonts-->	
+<!-- js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- js -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+</script>
+<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+<link href="css/jquery.uls.css" rel="stylesheet"/>
+<link href="css/jquery.uls.grid.css" rel="stylesheet"/>
+<link href="css/jquery.uls.lcd.css" rel="stylesheet"/>
+<!-- Source -->
+<script src="js/jquery.uls.data.js"></script>
+<script src="js/jquery.uls.data.utils.js"></script>
+<script src="js/jquery.uls.lcd.js"></script>
+<script src="js/jquery.uls.languagefilter.js"></script>
+<script src="js/jquery.uls.regionfilter.js"></script>
+<script src="js/jquery.uls.core.js"></script>
+<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+<script src="js/easyResponsiveTabs.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/Avedok Logotype - Grey + Gradient - Transparent Bg.png" alt=""></a>
+			</div>
+			<div class="header-right">
+			<a class="account" href="login.html">My Account</a>
+
+	<!-- Large modal -->
+			<div class="selectregion">
+				<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+				Select Location</button>
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+					aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+										&times;</button>
+									<h4 class="modal-title" id="myModalLabel">
+										Please Choose Your Location</h4>
+								</div>
+								<div class="modal-body">
+									 <form class="form-horizontal" role="form">
+										<div class="form-group">
+											<select id="basic2" class="show-tick form-control" multiple>
+												<optgroup label="Popular Cities">
+													<option selected style="display:none;color:#eee;">Select State</option>
+													<option>Abuja</option>
+													<option>Lagos</option>
+													<option>Delta</option>
+													
+													
+												</optgroup>
+						
+											</select>
+										</div>
+									  </form>    
+								</div>
+							</div>
+						</div>
+					</div>
+				<script>
+				$('#myModal').modal('');
+				</script>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="banner text-center">
+		<div class="container">    
+			<h1>Sell or Advertise   anything online  with Ave<span>dok</span></h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+			<a href="post-ad.html">Post Free Ad</a>
+	    </div>
+	</div>
+	<!-- Terms of use -->
+	<div class="terms main-grid-border">
+		<div class="container">
+			<h2 class="head">Terms of Use</h2>
+				<div class="panel-group" id="accordion">
+				<!-- First Panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							 <h4 class="panel-title" data-toggle="collapse" data-target="#collapseOne">
+								 <span>1.</span> Acceptance
+							 </h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>These Terms govern your access to, usage of, all content, Product and Services available at https://avedok.com website operated by Avedok Inc.</p>
+								<p>Your access to our services are subject to your acceptance, without modification, of all of the terms and conditions contained herein and all other operating rules and policies published and that may be published from time to time by us.</p>
+
+								<p>Please read the Agreement carefully before accessing or using our Services. By accessing or using any part of our Services, you agree to be bound by these Terms. If you do not agree to any part of the terms of the Agreement, then you may not access or use our Services.
+
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Second Panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							 <h4 class="panel-title" data-toggle="collapse"  data-target="#collapseTwo">
+								<span>2.</span>Third Party Services
+							 </h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse">
+							<div class="panel-body">								
+								<p>In using the Services, you may use third-party services, products, software, embeds, or applications developed by a third party (“Third Party Services”).</p>
+								<p>If you use any Third Party Services, you understand that: </p>
+								<p>Any use of a Third Party Service is at your own risk, and we shall not be responsible or liable to anyone for Third Party websites or Services.</p>
+								<p>You acknowledge and agree that We shall not be responsible or liable for any damage or loss caused or alleged to be caused by or in connection with the use of any such content, goods or services available on or through any such web sites or services.</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Third Panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							 <h4 class="panel-title" data-toggle="collapse" data-target="#collapseThree">
+								<span>3.</span> Accounts
+							 </h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Where use of any part of our Services requires an account, you agree to provide us with complete and accurate information when you register for an account</p>
+								<p>You will be solely responsible and liable for any activity that occurs under your account. You are responsible for keeping your account information up-to-date and for keeping your password secure.</p>
+									
+									
+									<p>You are responsible for maintaining the security of your account that you use to access the Service. You shall not share or misuse your access credentials. You must notify us immediately of any unauthorized uses of your account or upon becoming aware of any other breach of security.
+									
+									</p>
+							</div>
+						</div>
+					</div>
+					<!-- Fourth Panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							 <h4 class="panel-title" data-toggle="collapse" data-target="#collapseFour">
+								<span>4.</span> Termination
+							 </h4>
+						</div>
+						<div id="collapseFour" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>We may terminate or suspend your access to all or any part of our Services at any time, with or without cause, with or without notice, effective immediately.</p> 
+								<p>If you wish to terminate the Agreement or your Avedok account, you may simply discontinue using our Services.</p>
+								<p>All provisions of the Agreement which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Fifth Panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							 <h4 class="panel-title" data-toggle="collapse" data-target="#collapseFive">
+								<span>5.</span> Disclaimer
+							 </h4>
+						</div>
+						<div id="collapseFive" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Our Services are provided “AS IS.” and “AS AVAILABLE” basis. Avedok and its suppliers and licensors hereby disclaim all warranties of any kind, express or implied, including, without limitation, the warranties of merchantability, fitness for a particular purpose and non-infringement. Neither Avedok, nor its suppliers and licensors, makes any warranty that our Services will be error free or that access thereto will be continuous or uninterrupted. You understand that you download from, or otherwise obtain content or services through, our Services at your own discretion and risk.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Sixth Panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							 <h4 class="panel-title" data-toggle="collapse" data-target="#collapseSix">
+								<span>6.</span> Jurisdiction and Applicable Law
+							 </h4>
+						</div>
+						<div id="collapseSix" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Except to the extent any applicable law provides otherwise, the Agreement and any access to or use of our Services will be governed by the laws of the Federal Republic of Nigeria. </p>
+								<p>The proper venue for any disputes arising out of or relating to the Agreement and any access to or use of our Services will be the state and federal courts located in Nigeria. </p>
+							</div>
+						</div>
+					</div>
+					<!-- Seventh Panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							 <h4 class="panel-title" data-toggle="collapse" data-target="#collapseSeven">
+								<span>7.</span> Changes
+							 </h4>
+						</div>
+						<div id="collapseSeven" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Avedok reserves the right, at our sole discretion, to modify or replace these Terms at any time.</p>
+
+
+									<p>If we make changes that are material, we will let you know by posting on our website, or by sending you an email or other communication before the changes take effect. The notice will designate a reasonable period of time after which the new terms will take effect.</p>
+									
+									
+									<p>If you disagree with our changes, then you should stop using our Services within the designated notice period, or once the changes become effective.</p>
+									
+									
+									<p>Your continued use of our Services will be subject to the new terms.</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+		</div>	
+	</div>
+	<!-- // Terms of use -->
+	<!--footer section start-->		
+	<footer>
+		<div class="footer-top">
+			<div class="container">
+				<div class="foo-grids">
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Who We Are</h4>
+						<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+						<p>The point of using Lorem Ipsum is that it has a more-or-less normal letters, as opposed to using 'Content here.</p>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Help</h4>
+						<ul>
+							<li><a href="howitworks.html">How it Works</a></li>						
+							
+							<li><a href="faq.html">Faq</a></li>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							
+						</ul>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Information</h4>
+						<ul>
+							<li><a href="regions.html">Locations Map</a></li>	
+							<li><a href="terms.html">Terms of Use</a></li>
+						
+							<li><a href="privacy.html">Privacy Policy</a></li>	
+						</ul>
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h4 class="footer-head">Contact Us</h4>
+						<span class="hq">Our headquarters</span>
+						<address>
+							<ul class="location">
+								<li><span class="glyphicon glyphicon-map-marker"></span></li>
+								<li>CENTER FOR FINANCIAL ASSISTANCE TO DEPOSED NIGERIAN ROYALTY</li>
+								<div class="clearfix"></div>
+							</ul>	
+							<ul class="location">
+								<li><span class="glyphicon glyphicon-earphone"></span></li>
+								<li>+0 561 111 235</li>
+								<div class="clearfix"></div>
+							</ul>	
+							<ul class="location">
+								<li><span class="glyphicon glyphicon-envelope"></span></li>
+								<li><a href="mailto:info@example.com">mail@example.com</a></li>
+								<div class="clearfix"></div>
+							</ul>						
+						</address>
+					</div>
+					<div class="clearfix"></div>
+				</div>						
+			</div>	
+		</div>	
+		<div class="footer-bottom text-center">
+		<div class="container">
+			<div class="footer-logo">
+				<a href="index.html"><img src="images/avedok.png" alt=""></a>
+			</div>
+			<div class="footer-social-icons">
+				<ul>
+					<li><a class="facebook" href="#"><span>Facebook</span></a></li>
+					<li><a class="twitter" href="#"><span>Twitter</span></a></li>
+					<li><a class="googleplus" href="#"><span>Google+</span></a></li>
+					<li><a class="dribbble" href="#"><span>Dribbble</span></a></li>
+				</ul>
+			</div>
+			<div class="copyrights">
+				<p> © Avedok Classified Ads Website</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	</footer>
+	<!--footer section end-->
+        <!--footer section end-->
+</body>
+</html>
