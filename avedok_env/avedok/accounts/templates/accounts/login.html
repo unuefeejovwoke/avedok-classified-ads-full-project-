@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% include 'product/alerts.html' %}
+
+
+	<section>
+			<div id="page-wrapper" class="sign-in-wrapper">
+				<div class="graphs">
+					<div class="sign-in-form">
+						<div class="sign-in-form-top">
+							<h1>Log in</h1>
+						</div>
+						<div class="signin">
+							<form action="" method="post">
+								{% csrf_token %}
+									<div class="signin-rit">
+										<span class="checkbox1">
+											 <label class="checkbox"><input type="checkbox" name="checkbox" checked="">Forgot Password ?</label>
+										</span>
+										<p><a href="{% url 'reset_password' %}">Click Here</a> </p>
+										<div class="clearfix"> </div>
+									</div>
+									<div class="log-input">
+										<div class="log-input-left">
+										   <input type="text" class="user" name="email" value="eg johndoe@gmail.com" required/>
+										</div>
+										<div class="clearfix"> </div>
+									</div>
+									<div class="log-input">
+										<div class="log-input-left">
+										   <input type="password" name="password" class="lock" value="password" required/>
+										</div>
+
+										<div class="clearfix"> </div>
+									</div>
+									<div>
+										<span class="checkbox1">
+										 	<label class="checkbox"><input type="checkbox" name="remember_me" >Remember Me?</label>
+										</span>
+									</div>
+									<input type="submit" value="Log in">
+						    </form>
+						</div>
+						<div class="new_people">
+							<h2>For New People</h2>
+							<p>Having hands on experience in creating innovative designs,I do offer design
+								solutions which harness.</p>
+							<a href="{% url 'accounts:register' %}">Register Now!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	</section>
+{% endblock %}

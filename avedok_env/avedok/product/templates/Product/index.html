@@ -1,0 +1,552 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Avedok || Classified Ads Website</title>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap-select.css' %}">
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+<link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
+
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!--//fonts-->	
+<!-- js -->
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<!-- js -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-select.js' %}"></script>
+
+<script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+</script>
+<script type="text/javascript" src="{% static 'js/jquery.leanModal.min.js' %}"></script>
+<link href="{% static 'css/jquery.uls.css' %}" rel="stylesheet"/>
+<link href="{% static 'css/jquery.uls.grid.css' %}" rel="stylesheet"/>
+<link href="{% static 'css/jquery.uls.lcd.css' %}" rel="stylesheet"/>
+<!-- Source -->
+<script src="{% static 'js/jquery.uls.data.js' %}"></script>
+<script src="{% static 'js/jquery.uls.data.utils.js' %}"></script>
+<script src="{% static 'js/jquery.uls.lcd.js' %}"></script>
+<script src="{% static 'js/jquery.uls.languagefilter.js' %}"></script>
+<script src="{% static 'js/jquery.uls.regionfilter.js' %}"></script>
+<script src="{% static 'js/jquery.uls.core.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/easy-responsive-tabs.css' %} " />
+<script src="{% static 'js/easyResponsiveTabs.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" media="screen" />
+<script type="text/javascript">
+	$(document).ready(function () {    
+	var elem=$('#container ul');      
+		$('#viewcontrols a').on('click',function(e) {
+			if ($(this).hasClass('gridview')) {
+				elem.fadeOut(1000, function () {
+					$('#container ul').removeClass('list').addClass('grid');
+					$('#viewcontrols').removeClass('view-controls-list').addClass('view-controls-grid');
+					$('#viewcontrols .gridview').addClass('active');
+					$('#viewcontrols .listview').removeClass('active');
+					elem.fadeIn(1000);
+				});						
+			}
+			else if($(this).hasClass('listview')) {
+				elem.fadeOut(1000, function () {
+					$('#container ul').removeClass('grid').addClass('list');
+					$('#viewcontrols').removeClass('view-controls-grid').addClass('view-controls-list');
+					$('#viewcontrols .gridview').removeClass('active');
+					$('#viewcontrols .listview').addClass('active');
+					elem.fadeIn(1000);
+				});									
+			}
+		});
+	});
+	</script>
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            $("#flexiselDemo3").flexisel({
+                visibleItems:1,
+                animationSpeed: 1000,
+                autoPlay: true,
+                autoPlaySpeed: 5000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint:480,
+                        visibleItems:1
+                    },
+                    landscape: {
+                        changePoint:640,
+                        visibleItems:1
+                    },
+                    tablet: {
+                        changePoint:768,
+                        visibleItems:1
+                    }
+                }
+            });
+
+       });
+    </script>
+    <script type="text/javascript" src="{% static 'js/jquery.flexisel.js' %}"></script>
+
+</head>
+<body>
+    <nav>
+		<div class="logo">
+            <a href="/"><img src="{% static 'images/Avedok Logo-for dark bg.svg' %}"></a>
+		</div>
+		<input type="checkbox" id="click">
+		<label for="click" class="menu-btn">
+		<i class="fas fa-bars"></i>
+		</label>
+		<ul>
+            {% if user.is_authenticated %}
+             <li><a href="{% url 'accounts:profile' %}">My Profile</a> </li>
+             <li><a href="{% url 'products:add_advertise' %}">Post Ad</a></li>
+             <li><a href="{% url 'accounts:logout' %}">
+               Logout
+              </a>
+              {% else %}
+              <li>
+                  <a class="active" href="{% url 'accounts:login' %}">My Account</a>
+              </li>
+              {% endif %}
+          </ul>
+	</nav>
+	{% comment %} <div class="header">
+		<div class="container">
+			<div class="logo">
+				<a href="/"><img src="{% static 'images/Avedok Logotype - Grey + Gradient - Transparent Bg.png' %}"></a>
+			</div>
+			<div class="header-right">
+			    {% if user.is_authenticated %}
+				<a class="account" href="{% url 'accounts:profile' %}">My Profile</a> 
+				<a class="account" href="{% url 'products:add_advertise' %}">Post Ad</a>
+				<a class="account" href="javascript:{document.getElementById('logout').submit()}">
+				<i class="fas fa-sign-out-alt"></i>Logout
+				</a>
+				<form id="logout" action="{% url 'accounts:logout' %}" method="post">
+				{% csrf_token %}
+				<input type="hidden">
+				</form>
+				{% csrf_token %}
+					{% else %}
+						<a class="account" href="{% url 'accounts:login' %}">My Account</a>
+					{% endif %}
+
+	
+		   </div>
+		</div>
+	</div>  {% endcomment %}
+
+    <div class="wrapper">
+        <section class="featured-articles section-header-offset">
+            <div class="featured-articles-container container d-grid">
+    
+                <div class="featured-content d-grid">
+                    <div class="headline-banner">
+                        {% for pod in podcast %}
+                        <h3 class="headline fancy-border">
+                            <span class="place-items-center">Weekly Podcast</span>
+                        </h3>
+                        <span class="headline-description"> <a href="{{pod.podcastlink}}" style="color: white;">{{pod.name}}</a> </span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+    {% comment %} <section class="quick-read section">
+        <div class="container">
+            <h2 class="title section-title" data-name="Anime Workout Challenge">Anime Workout Challenge</h2>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+
+                    
+
+                    
+                    <a href="" class="article swiper-slide">
+                        <img src="https://i.pinimg.com/236x/c4/89/af/c489af2f350d83b87ad6a779771be876.jpg" alt="" class="article-image">
+
+                        <div class="article-data-container">
+                        
+                            <div class="article-data">
+                                <span>June 30th 2022</span>
+                                <span class="article-data-spacer"></span>
+                                <span>5 min read and video shorts</span>
+                            </div>
+    
+                            <h3 class="title article-title">Mike Oze<h3>
+                        </div>
+                    </a>
+
+                    
+                    <a href="" class="article swiper-slide">
+                        <img src="https://img.wattpad.com/cover/295195006-256-k907030.jpg" alt="" class="article-image">
+
+                        <div class="article-data-container">
+                        
+                            <div class="article-data">
+                                <span>June 30th 2022</span>
+                                <span class="article-data-spacer"></span>
+                                <span>5 min read and video shorts</span>
+                            </div>
+    
+                            <h3 class="title article-title">Deku<h3>
+                        </div>
+                    </a>
+
+                    
+                </div>
+
+                <div class="swiper-button-prev swiper-controls"></div>
+                <div class="swiper-button-next swiper-controls"></div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'images/Web Banner - Need Help Avedok.png' %}" class="d-block w-100 avedok" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/Web Banner - FB Ad traing.png' %}" class="d-block w-100 avedok" alt="...">
+              </div>
+              <div class="carousel-item active">
+                <img src="{% static 'images/Web Banner - EBA 2.0 .png' %}" class="d-block w-100 avedok" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true" style="height:10rem; width:4rem; background-color: #302e2e;"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true" style="height:10rem; width:4rem; background-color: #302e2e;"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+  
+    
+
+    <div class="content">
+       
+			<div class="categories">
+				<div class="container">
+					{% for category in category_list %}
+					<div class="col-md-2 focus-grid">
+						<a href="{% url 'products:product_list_cateogry' category.slug %}">
+							<div class="focus-border">
+								<div class="focus-layout">
+									
+									<h4 class="clrchg">{{ category.name}}</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+				    {% endfor %}
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+
+           
+			
+				<!-- slider -->
+            <div class="trending-ads">
+                <div class="container">
+                <!-- slider -->
+                <div class="trend-ads">
+                    <h2>Trending Ads</h2>
+                            <ul id="flexiselDemo3">
+                                <li>
+                                    {% for trend_product in trending_products %}
+                                        <div class="col-md-3 biseller-column">
+                                            <a href="{% url 'products:product_detail' trend_product.slug%}">
+                                                <img src="{{ trend_product.photo_main.url}}" height="250"/>
+                                                <span class="price">&#36; {{trend_product.price}}</span>
+                                            </a>
+                                            <div class="ad-info">
+                                                <h5>{{trend_product.name}}</h5>
+                                                <span>{{trend_product.created}}</span>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                </li>
+                        </ul>
+                            
+                    </div>
+            </div>
+			<!-- //slider -->				
+			</div>
+			<!--featured ads-->
+			
+			
+			
+		</div>
+	
+		<!-- content-starts-here -->
+   
+		<section id="about-app" class="section-p1">
+			<h1>How Avedok <a href="#">Works</a></h1> 
+			<div class="video">
+				<video autoplay muted loop src="{% static 'images/1.mp4' %}"></video>
+			</div>
+		</section>
+		<!--footer section start-->	
+		<section class="card1 container1 grid1">
+            <div class="card__container grid1">
+                <!--==================== CARD 1 ====================-->
+                <article class="card__content grid1">
+                    <div class="card__pricing">
+                        <div class="card__pricing-number">
+                            <span class="card__pricing-symbol">NGN</span>0
+                        </div>
+                        <span class="card__pricing-month">/month</span>
+                    </div>
+    
+                    <header class="card__header">
+                        <div class="card__header-circle grid1">
+                            <img src="{% static 'images/free-coin.png' %}" alt="" class="card__header-img">
+                        </div>
+                        
+                        <span class="card__header-subtitle">Free plan</span>
+                        <h1 class="card__header-title">Basic</h1>
+                    </header>
+                    
+                    <ul class="card__list grid1">
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">1 Ad per Category</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">No Ad Boost</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">No Catalog Page</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Links To Whatsapp Only</p>
+                        </li>
+                    </ul>
+    
+                    <button class="card__button">Choose this plan</button>
+                </article>
+    
+                <!--==================== CARD 2 ====================-->
+                <article class="card__content grid1">
+                    <div class="card__pricing">
+                        <div class="card__pricing-number">
+                            <span class="card__pricing-symbol">NGN</span>0
+                        </div>
+                        <span class="card__pricing-month">30,000/month</span>
+                    </div>
+    
+                    <header class="card__header">
+                        <div class="card__header-circle grid1">
+                            <img src="{% static 'images/pro-coin.png' %}" alt="" class="card__header-img">
+                        </div>
+    
+                        <span class="card__header-subtitle">Most popular</span>
+                        <h1 class="card__header-title">Premium</h1>
+                    </header>
+                    
+                    <ul class="card__list grid1">
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited Ads Post</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited Ads Per Category</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">5 Ad Boost per week for 7 days each</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">2 Featured Ads</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Links to all Socials</p>
+                        </li>
+                    </ul>
+    
+                    <button class="card__button">Choose this plan</button>
+                </article>
+    
+                <!--==================== CARD 3 ====================-->
+                <article class="card__content grid1">
+                    <div class="card__pricing">
+                        <div class="card__pricing-number">
+                            <span class="card__pricing-symbol">NGN</span>
+                        </div>
+                        <span class="card__pricing-month">50,000/month</span>
+                    </div>
+    
+                    <header class="card__header">
+                        <div class="card__header-circle grid1">
+                            <img src="{% static 'images/enterprise-coin.png' %}" alt="" class="card__header-img">
+                        </div>
+    
+                        <span class="card__header-subtitle">For agencies</span>
+                        <h1 class="card__header-title">Enterprise</h1>
+                    </header>
+                    
+					<ul class="card__list grid1">
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited Ads Post</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Unlimited Ads Per Category</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">8 Ad Boost per week for 7 days each</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">3 Featured Ads</p>
+                        </li>
+                        <li class="card__list-item">
+                            <i class="uil uil-check card__list-icon"></i>
+                            <p class="card__list-description">Direct link to your website all Socials</p>
+                        </li>
+                    </ul>
+    
+                    <button class="card__button">Choose this plan</button>
+                </article>
+            </div>
+        </section>		
+
+
+	
+		
+		
+		<footer>
+			<div class="footer-top">
+				<div class="container">
+					<div class="foo-grids">
+						<div class="col-md-3 footer-grid">
+							<h4 class="footer-head">Who We Are</h4>
+							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+							<p>The point of using Lorem Ipsum is that it has a more-or-less normal letters, as opposed to using 'Content here.</p>
+						</div>
+						<div class="col-md-3 footer-grid">
+							<h4 class="footer-head">Help</h4>
+							<ul>
+								<li><a href="howitworks.html">How it Works</a></li>						
+								
+								<li><a href="faq.html">Faq</a></li>
+								<li><a href="feedback.html">Feedback</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								
+							</ul>
+						</div>
+						<div class="col-md-3 footer-grid">
+							<h4 class="footer-head">Information</h4>
+							<ul>
+								<li><a href="regions.html">Locations Map</a></li>	
+								<li><a href="terms.html">Terms of Use</a></li>
+							
+								<li><a href="privacy.html">Privacy Policy</a></li>	
+							</ul>
+						</div>
+						<div class="col-md-3 footer-grid">
+							<h4 class="footer-head">Contact Us</h4>
+							<span class="hq">Our headquarters</span>
+							<address>
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-map-marker"></span></li>
+									<li>CENTER FOR FINANCIAL ASSISTANCE TO DEPOSED NIGERIAN ROYALTY</li>
+									<div class="clearfix"></div>
+								</ul>	
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-earphone"></span></li>
+									<li>+0 561 111 235</li>
+									<div class="clearfix"></div>
+								</ul>	
+								<ul class="location">
+									<li><span class="glyphicon glyphicon-envelope"></span></li>
+									<li><a href="mailto:info@example.com">mail@example.com</a></li>
+									<div class="clearfix"></div>
+								</ul>						
+							</address>
+						</div>
+						<div class="clearfix"></div>
+					</div>						
+				</div>	
+			</div>	
+			<div class="footer-bottom text-center">
+			<div class="container">
+				<div class="footer-logo">
+					<a href="index.html"><img src="{% static 'images/avedok.png' %}"></a>
+				</div>
+				<div class="footer-social-icons">
+					<ul>
+						<li><a class="facebook" href="#"><span>Facebook</span></a></li>
+						<li><a class="twitter" href="#"><span>Twitter</span></a></li>
+						<li><a class="googleplus" href="#"><span>Google+</span></a></li>
+						<li><a class="dribbble" href="#"><span>Dribbble</span></a></li>
+					</ul>
+				</div>
+				<div class="copyrights">
+					<p> © Avedok Classified Ads Website</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		</footer>
+		<!--footer section end-->
+        <!--footer section end-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>
